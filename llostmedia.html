@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div class="container email">
+        <h3>Создать профиль</h3>
+        <p>Создание профиля является не обязательным действием</p>
+        <div class="block">
+            <div>
+                <h4>Введите Email</h4>
+            </div>
+            <div>
+                <input type="email" id="emailField" placeholder="xxxxxxxxxx@email.com">
+                <button onclick="checkEmail()">Продолжить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function checkEmail() {
+        let email = document.querySelector('#emailField').value;
+        if (!email.includes('@')) alert('Нет символа @');
+        else if (!email.includes('.')) alert('Нет символа .');
+        else alert('Все отлично!')
+    }
+
+</script>
